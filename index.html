@@ -3,44 +3,69 @@
         <link rel="stylesheet" href="estilos.css">
         <style>
             body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-color: #f0f2f5; /* Adicionado um fundo para melhor visualização */
+                margin: 0;
+                font-family: sans-serif;
+            }
 
-a {
-    text-decoration: none;
-}
+            a {
+                text-decoration: none;
+            }
 
-.box {
-    font-size: 20px;
-    color: white;
-    height: 250px;
-    width: 350px;
-    border-radius: 10px;
-    background: #191919;
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+            .box {
+                font-size: 20px;
+                color: white;
+                height: 250px;
+                width: 350px;
+                border-radius: 10px;
+                background: #191919;
+                flex-direction: column;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adicionado uma sombra para destaque */
+            }
 
-.buttons-container {
-    display: flex;
-    justify-content: space-around;
-    height: 50px;
-    width: 150px;
-}
+            .buttons-container {
+                display: flex;
+                justify-content: space-around;
+                height: 50px;
+                width: 150px;
+            }
 
-button {
-    height: 30px;
-    width: 50px;
-    background: white;
-    border-radius: 5px;
-    color: blue;
-    font-weight: 600;
-}
+            button {
+                height: 30px;
+                width: 50px;
+                background: white;
+                border: none; /* Removido a borda padrão */
+                border-radius: 5px;
+                color: #191919; /* Cor do texto ajustada para melhor contraste */
+                font-weight: 600;
+                cursor: pointer; /* Adicionado cursor de mão para indicar que é clicável */
+                transition: background-color 0.3s ease;
+            }
+            
+            button#sim {
+                background-color: #4CAF50; /* Verde para o botão 'Sim' */
+                color: white;
+            }
+
+            button#sim:hover {
+                background-color: #45a049; /* Escurece o verde ao passar o mouse */
+            }
+
+            button#no {
+                background-color: #f44336; /* Vermelho para o botão 'Não' */
+                color: white;
+            }
+
+            button#no:hover {
+                background-color: #da190b; /* Escurece o vermelho ao passar o mouse */
+            }
 
         </style>
     </head>
@@ -48,15 +73,20 @@ button {
         <div class="box">
             <p>Vai mandar 20 no pix do Silvio???</p>
             <div class="buttons-container">
-              <button>
-                <a <escreva{"62 995622341} >  >Sim</a>
+              <button id="sim">
+                <a>Sim</a>
               </button>
               <button id="no">Não</button>
             </div>
           </div>
 
     </body>    
-    <script>let button = document.getElementById('no');
+    <script>
+        document.getElementById('sim').addEventListener('click', function() {
+            alert('62995622341');
+        });
+
+        let button = document.getElementById('no');
         let height = window.innerHeight - 50;
         let width = window.innerWidth - 50;
         
@@ -64,8 +94,6 @@ button {
           button.style.position = "absolute";
           button.style.top = Math.random() * height + "px";
           button.style.left = Math.random() * width + "px";
-        });</script>
+        });
+    </script>
 </html>
-
-
-
